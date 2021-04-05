@@ -1,11 +1,14 @@
-import React from 'react';      
+import React,  {useContext} from 'react';      
 
+import Context from "../Contexts"
 
-const WeatherSearch = (props) => {
+const WeatherSearch = () => {
+
+    const {fetchdata} = useContext(Context)
     return (
         <div className="weather-search">
-            <form onSubmit={props.fetchdata} className="weather-search__form">
-            <input autoComplete="off" className="weather-search__input" type="text"/>
+            <form onSubmit={fetchdata} className="weather-search__form">
+            <input name="location" autoComplete="off" className="weather-search__input" type="text"/>
         <div className="weather-search__submit">
             <button className="weather-search__button">&rarr;</button>
             </div>
