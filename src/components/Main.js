@@ -11,7 +11,7 @@ import Time from "./Time"
 import Greeting from './Greeting';
 import Footer from './Footer';
 
-
+console.log(process.env.REACT_APP_WEATHER_API_KEY)
 
 
 
@@ -30,8 +30,7 @@ const Main = () => {
         const location = e.target.elements.location.value
         if (!location) return (setError("Please Enter the Name of a Location!"), setWeather(null))
         
-        const API_KEY = "965d1999225fb47b09242ec2faec313e"
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&units=metric`
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`
         const req = axios.get(url)
         const res = await req 
 
@@ -40,7 +39,7 @@ const Main = () => {
         setError(null)
         
     }
-    console.log(weather)
+    
 
 
     return ( 
