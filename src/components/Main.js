@@ -11,7 +11,7 @@ import Time from "./Time"
 import Greeting from './Greeting';
 import Footer from './Footer';
 
-console.log(process.env.REACT_APP_WEATHER_API_KEY)
+
 
 
 
