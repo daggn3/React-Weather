@@ -8,6 +8,8 @@ import Weatherdata from './Weather';
 import Fail from './Fail'
 
 import Time from "./Time"
+import Greeting from './Greeting';
+import Footer from './Footer';
 
 
 
@@ -35,6 +37,7 @@ const Main = () => {
 
         setWeather(res.data.main)
         setName(res.data.name)
+        setError(null)
         
     }
     console.log(weather)
@@ -45,12 +48,15 @@ const Main = () => {
             <Header />
             
             <Card>
+            
                 <Time />
+                <Greeting />
                 <Context.Provider value = {{fetchdata , weather, name, error}}>
                     <WeatherSearch  />
                     {weather && <Weatherdata />}
                     {error && <Fail error={error}/>}
                 </Context.Provider>
+                <Footer />
             </Card>
         </div>
      );
