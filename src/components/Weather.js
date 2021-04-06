@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import Context from '../Contexts'
+import { FaCity } from 'react-icons/fa';
 
 
 
@@ -12,7 +13,7 @@ const WeatherData = () => {
     
     return ( 
         <div className="weather-data">
-  <p className="weather__tagline">Current Weather Information for <span className="weather-data__city">{name}</span></p>
+  <p className="weather__tagline">Current Weather Information for <span className="weather-data__city">{name}   <FaCity /> </span></p>
   <div className="weather-data__box">
     <span className="weather-data__property">
       <p className="weather-data__title">Temperature (°C)</p>

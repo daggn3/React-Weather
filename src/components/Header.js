@@ -4,7 +4,7 @@ import { WiDayCloudy } from 'react-icons/wi';
 const Header = () => (
 
     <div className="header">
-        <h1 className="header__title">Reacting to the Weather <WiDayCloudy/> </h1>
+        <h1 className="header__title">Weather Reaction <WiDayCloudy/> </h1>
     </div>
 )
     
